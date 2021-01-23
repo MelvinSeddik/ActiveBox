@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiveBox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="banner">
+
+            <div id="myHeader">
+                <div class="topNav" id="header-top">
+                    <a href="#"><img src="images/logo.png" alt="ActiveBox logo"></a>
+
+                    <!-- NAV -->
+                    <nav class="flex" id="burger">
+                        <a href="#">Features</a>
+                        <a href="#">Works</a>
+                        <a href="#">Our team</a>
+                        <a href="#">Testimonials</a>
+                        <a href="#">Download</a>
+                        <a href="javascript:void(0);" class="icon" title="Display menu">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+            <section class="banner-container">
+                <h1>Your favorite one page multi purpose template</h1>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ratione reiciendis itaque neque
+                    debitis
+                    odio distinctio iure non at laudantium, quos aliquam.
+                </span>
+                <a href="#" class="btn" id="find">Find out more</a>
+            </section>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- SECTION 1 -->
+        <section class="flex" id="section1">
+            <article class="flex">
+                <img src="images/crayon.png" alt="">
+                <h3>Easily customised</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptates. Fuga laboriosam, enim harum
+                    esse voluptatum animi similique corrupti aperiam provident quas praesentium.</p>
+            </article>
+
+            <article class="flex">
+                <img src="images/ecran.png" alt="">
+                <h3>Responsive ready</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptates. Fuga laboriosam, enim harum
+                    esse voluptatum animi similique corrupti aperiam provident quas praesentium.</p>
+            </article>
+
+            <article class="flex">
+                <img src="images/ampoule.png" alt="">
+                <h3>Modern design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptates. Fuga laboriosam, enim harum
+                    esse voluptatum animi similique corrupti aperiam provident quas praesentium.</p>
+            </article>
+
+            <article class="flex">
+                <img src="images/network.png" alt="">
+                <h3>Clean code</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptates. Fuga laboriosam, enim harum
+                    esse voluptatum animi similique corrupti aperiam provident quas praesentium.</p>
+            </article>
+
+            <article class="flex">
+                <img src="images/malette.png" alt="">
+                <h3>Ready to ship</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptates. Fuga laboriosam, enim harum
+                    esse voluptatum animi similique corrupti aperiam provident quas praesentium.</p>
+            </article>
+
+            <article class="flex">
+                <img src="images/cloud.png" alt="">
+                <h3>Download for free</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, voluptates. Fuga laboriosam, enim harum
+                    esse voluptatum animi similique corrupti aperiam provident quas praesentium.</p>
+            </article>
+        </section>
+
+
+        <!-- SECTION 2 -->
+        <section class="flex" id="section2">
+
+            <!-- MODAL -->
+            <div class="flex" id="modal">
+                <i class="fas fa-times" id="croix"></i>
+                <h4></h4>
+                <figure class="flex">
+                    <img src="" alt="">
+                    <div class="left-modal"><i class="fas fa-angle-left"></i></div>
+                    <div class="right-modal"><i class="fas fa-angle-right"></i></div>
+                </figure>
+            </div>
+            <!-- GALLERY -->
+            <div class="img-container" onMouseOut="hide(text[0]), noMouseImg(img[0]);"
+                onMouseOver="show(text[0]), onMouseImg(img[0]);">
+                <figure>
+                    <img src="images/work-1.jpg" alt="work1" class="gallery" id="img1">
+                    <figcaption class="text" id="text1">
+                        <h4>Project name 1</h4>
+                        <p>Website Design</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="img-container" onMouseOut="hide(text[1]), noMouseImg(img[1]);"
+                onMouseOver="show(text[1]), onMouseImg(img[1]);">
+                <figure>
+                    <img src="images/work-2.jpg" alt="work2" class="gallery" id="img2">
+                    <figcaption class="text" id="text2">
+                        <h4>Project name 2</h4>
+                        <p>Website Design</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="img-container" onMouseOut="hide(text[2]), noMouseImg(img[2]);"
+                onMouseOver="show(text[2]), onMouseImg(img[2]);">
+                <figure>
+                    <img src="images/work-3.jpg" alt="work3" class="gallery" id="img3">
+                    <figcaption class="text" id="text3">
+                        <h4>Project name 3</h4>
+                        <p>Website Design</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="img-container" onMouseOut="hide(text[3]), noMouseImg(img[3]);"
+                onMouseOver="show(text[3]), onMouseImg(img[3]);">
+                <figure>
+                    <img src="images/work-5.jpg" alt="work4" class="gallery" id="img4">
+                    <figcaption class="text" id="text4">
+                        <h4>Project name 4</h4>
+                        <p>Website Design</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="img-container" onMouseOut="hide(text[4]), noMouseImg(img[4]);"
+                onMouseOver="show(text[4]), onMouseImg(img[4]);">
+                <figure>
+                    <img src="images/work-6.jpg" alt="work5" class="gallery" id="img5">
+                    <figcaption class="text" id="text5">
+                        <h4>Project name 5</h4>
+                        <p>Website Design</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="img-container" onMouseOut="hide(text[5]), noMouseImg(img[5]);"
+                onMouseOver="show(text[5]), onMouseImg(img[5]);">
+                <figure>
+                    <img src="images/work-7.jpg" alt="work6" class="gallery" id="img6">
+                    <figcaption class="text" id="text6">
+                        <h4>Project name 6</h4>
+                        <p>Website Design</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="flex" id="section3">
+            <article class="flex">
+                <figure>
+                    <img src="images/team-1.jpg" alt="Ruth Woods">
+                    <figcaption>
+                        <h3>Ruth Woods</h3>
+                    </figcaption>
+                </figure>
+
+
+                <h4>Founder CEO</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, omnis dolores! Velit, ex quasi.
+                    Sint distinctio ipsa, animi similique corrupti aperiam praesentium, incidunt provident quas saepe,
+                    sequi dignissimos cupiditate porro. Sint distinctio ipsa, animi similique corrupti aperiam
+                    praesentium</p>
+                <div class="flex">
+                    <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </article>
+            <article class="flex">
+                <figure>
+                    <img src="images/team-2.jpg" alt="Timothy Reed">
+                    <figcaption>
+                        <h3>Timothy Reed</h3>
+                    </figcaption>
+                </figure>
+                <h4>Co-Founder Developer</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, omnis dolores! Velit, ex quasi.
+                    Sint distinctio ipsa, animi similique corrupti aperiam praesentium, incidunt provident quas saepe,
+                    sequi dignissimos cupiditate porro. Sint distinctio ipsa, animi similique corrupti aperiam
+                    praesentium</p>
+                <div class="flex">
+                    <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </article>
+            <article class="flex">
+                <figure>
+                    <img src="images/team-3.jpg" alt="Victoria Valdez">
+                    <figcaption>
+                        <h3>Victoria Valdez</h3>
+                    </figcaption>
+                </figure>
+                <h4>UI designer</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, omnis dolores! Velit, ex quasi.
+                    Sint distinctio ipsa, animi similique corrupti aperiam praesentium, incidunt provident quas saepe,
+                    sequi dignissimos cupiditate porro. Sint distinctio ipsa, animi similique corrupti aperiam
+                    praesentium</p>
+                <div class="flex">
+                    <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </article>
+            <article class="flex">
+                <figure>
+                    <img src="images/team-4.jpg" alt="Beverly Little">
+                    <figcaption>
+                        <h3>Beverly Little</h3>
+                    </figcaption>
+                </figure>
+
+
+                <h4>Data scientist</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, omnis dolores! Velit, ex quasi.
+                    Sint distinctio ipsa, animi similique corrupti aperiam praesentium, incidunt provident quas saepe,
+                    sequi dignissimos cupiditate porro. Sint distinctio ipsa, animi similique corrupti aperiam
+                    praesentium</p>
+                <div class="flex">
+                    <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </article>
+
+        </section>
+        <!-- SECTION 4 -->
+        <section class="flex" id="section4">
+            <!-- SLIDER -->
+            <aside class="slider">
+                <div class="slides">
+                    <figure class="slide active">
+                        <img src="images/testimonial-1.jpg" alt="">
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/testimonial-2.jpg" alt="">
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/summer-192179_1280.jpg" alt="">
+                    </figure>
+                </div>
+
+                <!-- Controls -->
+                <div class="left-slide"><i class="fas fa-angle-left"></i></div>
+                <div class="right-slide"><i class="fas fa-angle-right"></i></div>
+            </aside>
+
+            <!-- ARTICLE -->
+            <article class="flex">
+                <blockquote>
+                    <p class="quote activeText" id="quote1">"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Debitis necessitatibus
+                        omnis aspernatur dolor! Doloremque repellat atque laudantium."</p>
+                    <p class="quote" id="quote2">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolores
+                        ad quis fuga
+                        quisquam dignissimos a, modi nulla provident ea praesentium!"</p>
+                    <p class="quote" id="quote3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nemo
+                        excepturi minus beatae facere consequatur blanditiis quaerat, accusamus totam magni eius!</p>
+                    <cite>SUSAN SIMS, INTERACTION DESIGNER AT XYZ</cite>
+                </blockquote>
+                <label class="flex" id="slide-dots"><a><i class="fas fa-circle active"></i></a><a><i
+                            class="fas fa-circle"></i></a><a><i class="fas fa-circle"></i></a></label>
+            </article>
+
+        </section>
+
+        <!-- SECTION 5 -->
+        <section class="flex" id="section5">
+            <h3>Are You Ready to Start? Download Now For Free!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <a href="#" class="btn">DOWNLOAD FOR FREE</a>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="flex" id="footer-top">
+            <div>
+                <h4>Location</h4>
+                <adress>3481 Melrose Place <br>Beverly Hills, CA 90210</adress>
+            </div>
+
+            <div class="flex">
+                <h4>Share with love</h4>
+                <div class="social">
+                    <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://fr.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://dribbble.com/" target="_blank"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>About ActiveBox</h4>
+                <p>Lorem ipsum dolor sit amet, reprehendepariatur debitis consectetur id dolor necessitatibus nobis
+                    architecto inventore beatae quae quo dolores!</p>
+            </div>
+            </div>
+        </section>
+
+        <section class="flex" id="footer-bot">
+            <small>Copyright © 2021 ActiveBox. All rights reserved <br> Made with ♥ by moi</small>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>

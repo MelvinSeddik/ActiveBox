@@ -1,0 +1,851 @@
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+}
+
+.flex{
+    display: flex;
+}
+
+figure{
+    margin: 0;
+}
+
+/* HEADER */
+#myHeader{
+    width: 100%;
+}
+
+#myHeader img{
+    width: 189px;
+    height: 24px;
+}
+
+div .sticky{
+    position: fixed;
+    z-index: 999;
+    margin: 0;
+    top: 0;
+    background: #292c47;
+}   
+
+#header-top{
+    width: 65%;
+    margin: auto;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.74);
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover{
+    color: white;
+}
+
+#myHeader .icon {
+    display: none;
+}
+
+hr{
+    width: 62%;
+    margin: auto;
+    border-color: rgba(255, 255, 255, 0.192);
+}
+
+.banner{
+    position: relative;
+    height: 750px;
+    overflow: hidden;
+    background: url("images/banner.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.banner-container{
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.banner-container h1{
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px black;
+}
+
+section span{
+    margin: 20px;
+    display: block;
+    color: rgba(255, 255, 255, 0.822);
+    font-size: 1.3em;
+}
+
+header .btn{
+    margin-top: 1em;
+    color: white;
+    padding: 16px 34px;
+    font-size: 0.9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(255, 21, 21, 0.685);
+    transition: 0.3s all;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 360%);
+}
+
+header .btn:hover{
+    background: rgba(255, 0, 0, 0.822);
+    transition: .5s;
+}
+
+/* SECTION 1 */
+main #section1{
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 6em auto 3em auto;
+}
+
+#section1 article{
+    align-items: center;
+    flex-direction: column;
+    width: 29%;
+    margin: 0 auto 3em auto;
+}
+
+#section1 article h3{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#section1 article p{
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.514)
+}
+
+/* SECTION 2 */
+main #section2{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#modal{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.973);
+    padding: 5%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms, visibility 200ms, scale 200ms;
+}
+
+#modal h4{
+    color: rgb(0, 0, 0);
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 1.5em;
+    width: 40%;
+    margin: 0 0 2% 0;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding: 1%;
+    border: 5px solid rgba(255, 255, 255, 0.671);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.733);
+}
+
+#modal #croix{
+    color: rgb(255, 255, 255);
+    margin-left: 80%;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 1.5em;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(107, 0, 0);
+    padding: 3px;
+}
+
+#modal #croix:hover{
+    color:rgba(255, 255, 255, 0.678)
+}
+
+#modal figure{
+    width: 70%;
+    margin: 4px auto;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#modal img{
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    border: 15px groove white;
+    transform: scale(0);
+    transition: opacity 500ms, visibility 1000ms, scale 1000ms;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.527);
+}
+
+
+
+.left-modal, .right-modal{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: rgba(66, 66, 66, 0.76);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    top: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.left-modal:hover, .right-modal:hover{
+    background: rgba(150, 150, 150, 0.459);
+}
+
+.left-modal{
+    left: 20px;
+}
+
+.right-modal{
+    right: 20px;
+}
+
+main #section2 .img-container{
+    width: 33.3333%;
+    border: 1px solid white;
+    background: rgb(255, 64, 64);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#section2 .text{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    opacity: 0;
+    transition: all .5s;
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: translate3d();
+}
+
+#section2 .text h4{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#section2 .text p{
+    text-align: center;
+}
+
+#section2 .img-container figure{
+    margin: 0;
+}
+
+#section2 div img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    transition: all .5s;
+    position: relative;
+}
+
+/* SECTION 3 */
+main #section3{
+    width: 70%;
+    flex-wrap: wrap;
+    margin: 8em auto 6em auto;
+}
+
+#section3 article{
+    width: 22.5%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#section3 article img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+#section3 h3{
+    font-family: 'Raleway', sans-serif;
+    color: rgba(0, 0, 0, 0.774);
+    margin-bottom: 0;
+    font-size: 1.3em;
+}
+
+#section3 h4{
+    text-transform: uppercase;
+    margin-top: 3%;
+    margin-bottom: 0;
+    color: rgba(255, 71, 25, 0.76);
+    font-size: .8em;
+}
+
+#section3 p{
+    color: rgba(0, 0, 0, 0.527);
+}
+
+#section3 div a{
+    padding: 1px;
+}
+
+#section3 ul li{
+    padding: 0 1px;
+}
+
+#section3 i{
+    height: 35px;
+    width: 35px;
+    border: 1px solid rgb(175, 175, 175);
+    text-align: center;
+    line-height: 35px;
+    color: rgb(175, 175, 175);
+}
+
+#section3 i:hover{
+    color:white;
+    background: rgba(255, 0, 0, 0.774);
+    transition: 0.3s ease;
+    transform: scale(1.05);
+    text-shadow: 3px 2px 0px black;
+}
+
+/* SECTION 4 */
+
+/* SLIDER */
+.slider{
+    width: 50%;
+    border: 8px solid #33212e;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .left-slide, .slider .right-slide{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.548);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    top: 50%;
+    margin-top: -20px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.slider .left-slide:hover, .slider .right-slide:hover{
+    background: rgba(255, 21, 21, 0.836);
+    box-shadow: 0 0 10px black;
+}
+
+.slider .left-slide{
+    left: 15px;
+}
+
+.slider .right-slide{
+    right: 15px;
+}
+
+.slider .slides .slide img{
+    width: 100%;
+    display: block;
+    animation: zoom 1s ease;
+}
+
+@keyframes zoom{
+    0%{transform: scale(1.8); opacity: .2}
+    50%{transform: scale(1.8)}
+    100%{transform: scale(1); opacity: 1}
+}
+
+.slider .slides .slide{
+    display: none;
+    position: relative;
+}
+
+.slider .slides .slide.active{
+    display: block;
+}
+
+/* ARTICLE */
+#section4 article{
+    background: #53354a;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column; 
+}
+
+#section4 label{
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -100%);
+    display: flex;
+    justify-content: center;
+}
+
+#section4 label a{
+    padding: 0 5%;
+    color:rgba(255, 255, 255, 0.438);
+    cursor: pointer;
+}
+
+#section4 label a:hover{
+    color: white;
+}
+
+#section4 label a .active{
+    color: white;
+}
+
+#section4 blockquote{
+    margin: 8% 10% 0 10%;
+}
+
+#section4 blockquote p{
+    font-family: 'Cardo', serif;
+    color: white;
+    font-size: 2.2vw;
+    font-style: italic;
+    margin: 0 0 5% 0;
+    display: none;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+#section4 .activeText{
+    display: block;
+    opacity: 1;
+}
+
+#section4 blockquote cite{
+    color:white;
+    font-size: 1.1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SECTION 5 */
+
+#section5{
+    flex-direction: column;
+    height: 350px;
+    text-align: center;
+    align-items: center;
+    padding: 3% 1% 5% 1%;
+    justify-content: center;
+}
+
+#section5 p{
+    text-transform: uppercase;
+}
+#section5 h3{
+    margin-bottom: 0;
+    font-size: 2em;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+}
+
+#section5 .btn{
+    margin-top: 2em;
+    color: white;
+    padding: 16px 34px;
+    font-size: 0.9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(255, 21, 21, 0.836);
+    transition: 0.3s all;
+}
+
+#section5 .btn:hover{
+    background: rgba(238, 13, 13, 0.925);
+    transition: .5s;
+}
+
+/* FOOTER */
+footer{
+    background: #313454;
+    margin-top: auto;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+footer section:nth-child(1){
+    width: 100%;
+    background: #3a3e64;
+    padding: 4% 15% 6% 15%;
+}
+
+footer section{
+    justify-content: space-between;
+}
+
+footer section div{
+    width: 33%;
+}
+footer h4{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+footer p{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer label{
+    justify-content: center;
+}
+
+footer div:nth-child(2){
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row!important;
+}
+
+footer .social a{
+    padding: 1px;
+
+}
+
+footer i{
+    height: 35px;
+    width: 35px;
+    border: 1px solid rgb(175, 175, 175);
+    text-align: center;
+    line-height: 35px!important;
+    color: rgb(255, 255, 255);
+}
+
+footer i:hover{
+    color:white;
+    background: rgba(255, 0, 0, 0.774);
+    transition: 0.3s ease;
+    transform: scale(1.05);
+    text-shadow: 3px 2px 0px black;
+}
+
+footer section:nth-child(2){
+    padding: 20px;
+}
+
+footer small{
+    width: 100%;
+}
+
+@media only screen and (max-width: 1420px){
+
+    #header-top{
+        width: 80%;
+    }
+
+    hr{
+        width: 77%;
+    }
+
+    .banner-container{
+        width: 70%;
+    }
+
+    #section2 .text{
+        transform: translate(-50%, -60%);
+    }
+
+    main #section3{
+        width: 90%;
+        margin-bottom: 3em;
+    }
+}
+
+@media only screen and (max-width: 1260px){
+
+    .banner{
+        height: 600px;
+    }
+
+    .banner-container{
+        width: 80%;
+        padding-top: 10%;
+    }
+
+    .banner-container h1{
+        font-size: 3em;
+    }
+
+    #header-top{
+        width: 90%;
+    }
+
+    hr{
+        width: 87%;
+    }
+
+    nav a{
+        display: none;
+    }
+
+    #myHeader a.icon {
+        float: right;
+        display: block;
+        background: rgb(231, 66, 36);
+        border-radius: 50%;
+        font-size: 1.5em;
+        padding: 12px 16px;
+        color: white;
+    }
+
+    header .responsive{
+        width: 100%;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.925);
+        z-index: 9999;
+    }
+
+    header .responsive a{
+        display: block;
+        width: 100%;
+        padding: 1em;
+        font-size: 2em;
+    }
+
+    header .responsive .icon{
+        position: fixed;
+        top: 2.8%;
+        right: 7.4%;
+        width: initial;
+    }
+
+    main #section1{
+        width: 80%;
+    }
+
+    #modal figure{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+
+    main #section1{
+        width: 90%;
+    }
+
+    main #section1 article{
+        width: 40%;
+    }
+
+    main #section2 .img-container{
+        width: 50%;
+    }
+
+    #section2 .text h4{
+        font-size: 0.9em;
+    }
+
+    #section2 .text p{
+        font-size: 0.7em;
+    }
+
+    main #section3{
+        justify-content: center;
+    }
+
+    #section3 article{
+        width: 33.4%;
+        margin: 0 3% 2em 3%;
+        text-align: center;
+    }
+
+    .img1{
+
+        overflow: hidden;
+    }
+    
+    #footer-top{
+        flex-direction: column;
+        align-items: center;
+        padding: 1%;
+    }
+
+    footer section div{
+        width: 90%;
+        padding: 4%;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    #section4{
+        flex-direction: column;
+    }
+
+    .slider{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #section4 article{
+        width: 100%;
+        padding: 6% 0 10% 0;
+    }
+
+    #section4 blockquote{
+        margin: 0 5% 0 7%;
+    }
+
+    #section4 blockquote p{
+        font-size: 4vw;
+    }
+    
+    #section4 blockquote cite{
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .banner-container h1{
+        font-size: 2.5em;
+    }
+
+    .banner-container span{
+        font-size: 1.1em;
+    }
+
+    header .btn{
+        top: 60%;
+        font-size: 0.7em;
+        padding: 16px 20px;
+    }
+
+    main #section1 article{
+        width: 100%;
+    }
+    #modal{
+        padding: 0;
+    }
+
+    #modal figure{
+        width: 100%;
+    }
+
+    #modal h4{
+        font-size: 1.3em;
+        width: 60%;
+    }
+
+    main #section2 .img-container{
+        width: 100%;
+    }
+
+    #section3 article{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .banner-container{
+        top: 55%;
+    }
+    .banner-container h1{
+        font-size: 2em;
+    }
+
+    #section4 label{
+        font-size: 0.7em;
+    }
+
+    #section4 blockquote p{
+        font-size: 5.5vw;
+    }
+    
+    #section4 blockquote cite{
+        font-size: 3vw;
+    }
+}
